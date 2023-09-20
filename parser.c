@@ -6,7 +6,7 @@
  * Return: an array of pointers to the tokens,
  * or NULL if an error occurs.
  */
-char **tokenize(char *str, const char *delim)
+char **tokenize(char *string, const char *delim)
 {
 char *token = NULL;
 char **ret = NULL;
@@ -17,7 +17,7 @@ while (token)
 ret = realloc(ret, sizeof(char *) * (i + 1));
 if (ret == NULL)
 return (NULL);
-ret[i] = malloc(_strlen(token) + 1);
+ret[i] = malloc(_strlength(token) + 1);
 if (!(ret[i]))
 return (NULL);
 _strcpy(ret[i], token);
@@ -37,7 +37,7 @@ char *tmp = NULL;
 tmp = _strdup(input);
 if (tmp == NULL)
 {
-_puts("Mamory allocation error\n");
+_puts("Memory allocation error\n");
 exit(EXIT_FAILURE);
 }
 tokens = tokenize(tmp, "\t\r\n\a");

@@ -6,12 +6,12 @@ unsigned int num;
 i = 0;
 sign = 1;
 num = 0;
-while (str[i] != '\0')
+while (string[i] != '\0')
 {
-if (str[i] == '-')
+if (string[i] == '-')
 sign *= -1;
-else if (str[i] >= '0' && str[i] <= '9')
-num = (num * 10) + (str[i] - '0');
+else if (string[i] >= '0' && string[i] <= '9')
+num = (num * 10) + (string[i] - '0');
 else
 break;
 i++;

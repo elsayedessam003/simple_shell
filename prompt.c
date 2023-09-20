@@ -1,5 +1,5 @@
 #include "shell.h"
-void prompt(void)
+void prompted(void)
 {
 _puts(PROMPT);
 fflush(stdout);

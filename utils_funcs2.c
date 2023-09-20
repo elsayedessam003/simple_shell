@@ -26,7 +26,7 @@ char *_strdup(const char *str)
 {
 int length = 0;
 char *ret;
-if (str == NULL)
+if (string == NULL)
 return (NULL);
 while (*str++)
 length++;
@@ -34,7 +34,7 @@ ret = malloc(sizeof(char) * (length + 1));
 if (!ret)
 return (NULL);
 for (length++; length--;)
-ret[length] = *--str;
+ret[length] = *--string;
 return (ret);
 }
 int _putchar(char c)
